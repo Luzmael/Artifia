@@ -56,3 +56,9 @@ Este repositorio está administrado por el **AI Code Ecosystem Builder**.
 - **Acción**: Se corrige el error de compilación ERR_INVALID_URL al inicializar el cliente de Supabase con valores por defecto inválidos. Ahora se utiliza un fallback con formato de URL válido y se muestra una advertencia en consola si faltan las variables de entorno.
   - `[UPDATE]` src/lib/supabase.ts
 - **Explicación técnica**: Se ha corregido el error de inicialización de Supabase (ERR_INVALID_URL) que ocurría cuando las variables de entorno no estaban configuradas o tenían valores de marcador de posición no válidos. Ahora el cliente se inicializa de forma segura con un fallback válido para evitar fallos en tiempo de compilación o despliegue, mostrando una advertencia clara en la consola.
+
+
+## Proyecto / Actualización: 7/6/2026, 23:40:41
+- **Acción**: Se actualiza el archivo package.json para elevar la versión de Next.js a la v14.2.20 (versión parcheada y segura) y actualizar otras dependencias clave. Esto resuelve la advertencia de vulnerabilidad de seguridad crítica de Next.js 14.1.0 y reduce las advertencias de paquetes obsoletos reportadas en el log de compilación de Vercel.
+  - `[UPDATE]` package.json
+- **Explicación técnica**: Se ha actualizado el archivo `package.json` para migrar de Next.js 14.1.0 a Next.js 14.2.20, solucionando una vulnerabilidad de seguridad conocida (CVE-2025-12-11) y actualizando dependencias de desarrollo para evitar advertencias de deprecación durante el despliegue en Vercel.
