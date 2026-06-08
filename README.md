@@ -50,3 +50,9 @@ Este repositorio está administrado por el **AI Code Ecosystem Builder**.
 - **Acción**: Se corrige el error de compilación en 'src/pages/dashboard.tsx' formateando el código correctamente, resolviendo el error de sintaxis de llaves y mejorando la interfaz de usuario del panel de control con un diseño moderno usando Tailwind CSS.
   - `[UPDATE]` src/pages/dashboard.tsx
 - **Explicación técnica**: Se corrigió un error de sintaxis ('}' expected) en el archivo 'src/pages/dashboard.tsx' que impedía la compilación del proyecto. Se reestructuró el código con un formato limpio, se mejoró el manejo del estado de carga con un spinner animado y se actualizó la interfaz de usuario del panel de control para ofrecer una mejor experiencia visual.
+
+
+## Proyecto / Actualización: 7/6/2026, 23:36:00
+- **Acción**: Se corrige el error de compilación ERR_INVALID_URL al inicializar el cliente de Supabase con valores por defecto inválidos. Ahora se utiliza un fallback con formato de URL válido y se muestra una advertencia en consola si faltan las variables de entorno.
+  - `[UPDATE]` src/lib/supabase.ts
+- **Explicación técnica**: Se ha corregido el error de inicialización de Supabase (ERR_INVALID_URL) que ocurría cuando las variables de entorno no estaban configuradas o tenían valores de marcador de posición no válidos. Ahora el cliente se inicializa de forma segura con un fallback válido para evitar fallos en tiempo de compilación o despliegue, mostrando una advertencia clara en la consola.
